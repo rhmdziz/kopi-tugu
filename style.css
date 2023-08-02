@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --brown: #d37e57;
+    --white: #fffaf7;
+    --pure-brown: #373234;
+    --black: #000000;
+    --font: 'Rubik', sans-serif;;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font);
+    color: var(--black);
+    background-color: var(--white);
+}
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.navbar {
+    /* border-bottom: 1px #00000011 solid; */
+    box-shadow: 0 1px 4px 0 #00000011;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.4rem 14%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: var(--black);
+}
+.navbar .navbar-logo span {
+    color: var(--brown);
+}
+.navbar .navbar-logo img {
+    height: 3rem;
+}
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+}
+.navbar .navbar-nav .order-button {
+    border: 1px var(--brown) solid;
+    padding: 0.6rem 0.7rem;
+    margin-left: 1rem;
+    border-radius: 7.5px;
+    background-color: var(--brown);
+}
+.navbar .navbar-nav .order-button:hover {
+    box-shadow: 0 0 7.5px 2px #d37e5777;
+
+
+}
+.navbar .navbar-nav .order-button a {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.navbar .navbar-nav .nav-list a {
+    margin-left: 1.4rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    color: var(--pure-brown);
+}
+.navbar .navbar-nav .nav-list a:hover {
+    opacity: 1;
+    color: var(--black);
+}
+
+
+/* HEADER */
+.header {
+    height: 100vh;
+}
+.content {
+    padding: 5rem 14% 0;
+}
+
+
+
+/* ABOUT */
+.about {
+    height: 100vh;
+}
+
+
+
+
+/* FOOTER */
+.footer {
+    height: 12rem;
+    background-color: var(--pure-brown);
+}
