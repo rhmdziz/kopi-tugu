@@ -28,7 +28,6 @@ a {
 
 /* NAVBAR */
 .navbar {
-    /* border-bottom: 1px #00000011 solid; */
     box-shadow: 0 1px 4px 0 #00000011;
     background-color: #fffaf7cc;
     position: fixed;
@@ -42,6 +41,8 @@ a {
     z-index: 999;
     backdrop-filter: blur(10px);
 }
+
+
 .navbar .navbar-logo {
     font-size: 1.5rem;
     font-weight: 500;
@@ -93,22 +94,35 @@ a {
     font-size: 1.8rem;
 }
 
+.content {
+    padding: 6rem 14% 0;
+}
 
 /* HEADER */
 .header {
     height: 100vh;
+    position: relative;
+    background-color: var(--white);
 }
-.content {
-    padding: 6rem 14% 0;
+
+.header .header-logo {
+    position: absolute;
+    right: 14%;
+    bottom: 50%;
+    transform: translateY(50%);
 }
+.header .header-logo img {
+    border-radius: 40% 40%;
+}
+
 
 
 
 /* ABOUT */
 .about {
     height: 100vh;
-    /* display: none; */
-    background-color: var(--brown);
+    color: var(--white);
+    background-color: var(--pure-brown);
 }
 
 /* PRODUCT */
@@ -269,11 +283,11 @@ a {
     z-index: 2;
 }
 .footer .contact-link a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-bottom: 0.6rem;
 }
 .footer .contact-link i {
-    margin-right: 0.5rem;
+    margin-right: 0.4rem;
 }
 .footer span {
     color: var(--brown);
@@ -283,10 +297,16 @@ a {
     position: absolute;
     bottom: 0;
     left: 50%;
+    font-size: 0.6rem;
     font-family: var(--pure-font);
     transform: translateX(-50%);
 }
 
+
+
+.header svg {
+    bottom: -5rem;   
+}
 svg {
     position: absolute;
     /* bottom: -4rem; */
