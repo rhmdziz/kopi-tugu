@@ -15,3 +15,27 @@ window.addEventListener('scroll', () => {
   const scrollPosition = window.pageYOffset;
   parallaxBackground.style.backgroundPositionY = -scrollPosition * 0.75 + 'px';
 });
+
+
+const slider = document.getElementById('slider');
+let scrollInterval;
+
+function startAutoScroll() {
+scrollInterval = setInterval(() => {
+    slider.scrollLeft += slider.offsetWidth;
+    console.log('x:',slider.scrollLeft,'y:', slider.scrollWidth - slider.offsetWidth)
+    if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
+        slider.scrollLeft = 0;
+    }
+}, 3000); // Adjust the interval as needed (3000ms = 3 seconds)
+}
+
+function stopAutoScroll() {
+    clearInterval(scrollInterval);
+}
+
+slider.addEventListener('mouseenter', stopAutoScroll);
+slider.addEventListener('mouseleave', startAutoScroll);
+
+startAutoScroll(); // Start auto scroll when the page loads
+
