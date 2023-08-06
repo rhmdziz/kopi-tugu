@@ -23,7 +23,9 @@ let scrollInterval;
 function startAutoScroll() {
 scrollInterval = setInterval(() => {
     slider.scrollLeft += slider.offsetWidth;
+
     console.log('x:',slider.scrollLeft,'y:', slider.scrollWidth - slider.offsetWidth)
+
     if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
         slider.scrollLeft = 0;
     }
@@ -37,5 +39,4 @@ function stopAutoScroll() {
 slider.addEventListener('mouseenter', stopAutoScroll);
 slider.addEventListener('mouseleave', startAutoScroll);
 
-startAutoScroll(); // Start auto scroll when the page loads
-
+startAutoScroll();

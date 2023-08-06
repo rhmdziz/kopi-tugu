@@ -159,9 +159,10 @@ a {
 .header .content .hello .tagline {
     font-size: 4rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 .header .order-button {
-    position: absolute;
+    position: absolute;  
     font-family: var(--font);
     bottom: 30%;
     left: 0;
@@ -172,14 +173,14 @@ a {
 /* ABOUT */
 .about {
     height: 100vh;
+    background-color: var(--pure-brown);
     /* color: var(--white); */
     /* background-color: var(--pure-brown); */
 }
 .about .content {
-    padding: 0 14% 0;
+    padding: 0 14%;
     display: flex;
     align-items: center;
-    background-color: var(--pure-brown);
     color: var(--white);
     height: 100%;
 }
@@ -195,6 +196,7 @@ a {
     transition: transform 0.5s ease;
 }
 .about .slider  img {
+    border-radius: 0.5rem;
     flex: 1 0 100%;
     scroll-snap-align: start;
     aspect-ratio: 1/1;
@@ -207,6 +209,17 @@ a {
     padding: 1rem 0;
     font-family: var(--pure-font);
     text-align: justify;
+}
+.about .about-article .desc p {
+    margin-bottom: 1rem;
+}
+.about .about-article .desc .logo-halal {
+    background-color: var(--white);
+    display: inline-block;
+}
+.about .about-article .desc img {
+    width: 4rem;
+    height: auto;
 }
 
 
@@ -415,7 +428,7 @@ a {
 }
 .footer .footer-contact {
     /* background-color: red; */
-    width: 20%;
+    width: 25%;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -475,21 +488,40 @@ svg {
 
 
 @media (max-width: 768px) {
-    .navbar .navbar-nav .nav-list {
+    .navbar {
+        padding: 1.2rem 7%;
+    }
+    .navbar .navbar-nav .nav-list, .navbar .order-button {
         display: none;
     }
     .navbar .navbar-nav #menu {
         display: block;
     }
-
-    .header .order-button {
-        bottom: 20%;
+    .content {
+        padding: 6rem 7%;
+    }
+    
+    .header .content {
+        padding: 0 7%;
+    }
+    .header .content .hello .tagline {
+        font-size: 2.5rem;
+    }
+    .about {
+        min-height: 100vh;
+        padding: 5rem 0;
     }
     .about .content {
         flex-direction: column;
+        align-items: center;
         justify-content: center;
+        padding: 0 7%;
     }
     .about .slide-wrapper {
+        width: 100%;
+    }
+    .about .about-article {
+        padding-top: 1rem;
         width: 100%;
     }
     .contact .contact-box {
