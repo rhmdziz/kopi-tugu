@@ -118,6 +118,12 @@ a {
     color: var(--black);
 }
 
+
+
+
+
+
+
 .content {
     padding: 6rem 14% 0;
     z-index: 8;
@@ -487,11 +493,31 @@ svg {
     .navbar {
         padding: 1.2rem 7%;
     }
-    .navbar .navbar-nav .nav-list, .navbar .order-button {
+    .navbar .order-button {
         display: none;
     }
     .navbar .navbar-nav #menu {
         display: block;
+    }
+    /* RESPONSIVE NAVBAR */
+    .navbar .navbar-nav .nav-list {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--white);
+        height: 100vh;
+        width: 75%;
+        transition: 0.2s;
+    }
+    .navbar .navbar-nav .nav-list a {
+        display: block;
+        color: var(--pure-brown);
+        font-family: var(--pure-font);
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+    .navbar.active .navbar-nav .nav-list {
+        right: 0;
     }
     .content {
         padding: 6rem 7%;
@@ -543,5 +569,7 @@ svg {
         width: 100%;
         margin-bottom: 3rem;   
     }
+
+    
     
 }

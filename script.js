@@ -1,3 +1,4 @@
+// LIGHT NAVBAR
 const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
@@ -8,7 +9,20 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// RESPONSIVE NAVBAR 
+const menu = document.querySelector('#menu');
+menu.onclick = () => {
+    navbar.classList.toggle('active')
+}
+document.addEventListener('click', function(e) {
+    if(!menu.contains(e.target) && !navbar.contains(e.target)) {
+        navbar.classList.remove('active');
+    }
+});
 
+
+
+// PARALLAX BG
 const parallaxBackground = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
@@ -16,7 +30,7 @@ window.addEventListener('scroll', () => {
   parallaxBackground.style.backgroundPositionY = -scrollPosition * 0.75 + 'px';
 });
 
-
+// SLIDER IMG
 const slider = document.getElementById('slider');
 let scrollInterval;
 
